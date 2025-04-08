@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <script src="//client.px-cloud.net/PXBBEcJmxo/main.min.js" async></script>
   <title>Visitor Info</title>
 
   <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    script-src 'self' https://unpkg.com https://ipwho.is;
-    style-src 'self' 'unsafe-inline' https://unpkg.com;
-    connect-src https://ipwho.is;
-    img-src 'self' data: https://*.tile.openstreetmap.org https://unpkg.com;
-    font-src 'self';
-  ">
+  default-src 'self';
+  script-src 'self' https://unpkg.com https://ipwho.is 'wasm-unsafe-eval';
+  style-src 'self' 'unsafe-inline' https://unpkg.com;
+  connect-src https://ipwho.is 
+               https://collector-pxbbecjmxo.px-cloud.net 
+               https://collector-pxbbecjmxo.px-cdn.net 
+               https://collector-pxbbecjmxo.pxchk.net;
+  img-src 'self' data: https://*.tile.openstreetmap.org https://unpkg.com;
+  font-src 'self';
+">
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
