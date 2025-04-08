@@ -4,22 +4,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal');
   const form = document.getElementById('payment-form');
 
-  openBtn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-  });
+  if (openBtn && modal && form && closeBtn) {
+    openBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
 
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    alert('Mock payment submitted!');
-    modal.style.display = 'none';
-    form.reset();
-  });
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      alert('Mock payment submitted!');
+      modal.style.display = 'none';
+      form.reset();
+    });
+  }
 
-  document.getElementById('user-agent').textContent = navigator.userAgent;
+  const uaEl = document.getElementById('user-agent');
+  if (uaEl) uaEl.textContent = navigator.userAgent;
 
   fetch('https://ipapi.co/json/')
     .then(response => response.json())
