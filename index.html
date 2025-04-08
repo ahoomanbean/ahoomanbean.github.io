@@ -100,8 +100,42 @@
       margin-top: 1rem;
     }
   </style>
+
+  <style>
+    body.dark {
+      background-color: #121212;
+      color: #eee;
+    }
+    .info-card.dark {
+      background-color: #1e1e1e;
+      color: #ddd;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 2px solid #007bff;
+      color: #007bff;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .toggle-btn:hover {
+      background-color: #007bff;
+      color: white;
+    }
+    .info-card span.label {
+      font-weight: bold;
+      display: inline-block;
+      width: 100px;
+    }
+  </style>
 </head>
+
 <body>
+  <button id="darkModeToggle" class="toggle-btn">🌙 Dark Mode</button>
   <h1>Welcome</h1>
   <p>Click below to make a payment</p>
   
@@ -123,10 +157,10 @@
 
   <div class="info-card">
     <strong>Your Info</strong>
-    IP: <span id="ip">Loading...</span><br/> -->
-    Location: <span id="location">Loading...</span><br/> -->
-    ISP: <span id="org">Loading...</span><br/> -->
-    User Agent: <span id="user-agent"></span>
+    <span class="label">IP:</span> <span id="ip">Loading...</span><br/> -->
+    <span class="label">Location:</span> <span id="location">Loading...</span><br/> -->
+    <span class="label">ISP:</span> <span id="org">Loading...</span><br/> -->
+    <span class="label">User Agent:</span> <span id="user-agent"></span>
     <div id="map"></div>
   </div>
 
