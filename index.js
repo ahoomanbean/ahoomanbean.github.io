@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal');
   const form = document.getElementById('payment-form');
 
-  if (openBtn && modal && form && closeBtn) {
+  if (openBtn && closeBtn && modal && form) {
     openBtn.addEventListener('click', () => {
       modal.style.display = 'flex';
     });
@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const uaEl = document.getElementById('user-agent');
-  if (uaEl) uaEl.textContent = navigator.userAgent;
+  document.getElementById('user-agent').textContent = navigator.userAgent;
 
   fetch('https://ipapi.co/json/')
     .then(response => response.json())
