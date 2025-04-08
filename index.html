@@ -86,7 +86,35 @@ font-src 'self';
       border-radius: 8px;
       margin-top: 1rem;
     }
-  </style>
+  
+    .modal-form {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .modal-form label {
+      margin-top: 0.75rem;
+      text-align: left;
+    }
+    .modal-form input {
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.75rem;
+    }
+    .modal-form button {
+      padding: 0.7rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+    }
+    </style>
 </head>
 <body>
   <h1>Welcome</h1>
@@ -94,7 +122,22 @@ font-src 'self';
   <button id="openModalBtn">Pay Now</button>
   <div id="modal">
     <div id="closeBtn">✖</div>
-    <iframe src="payment-form.html"></iframe>
+    
+    <form id="payment-form" class="modal-form">
+      <h2>Enter Payment Info</h2>
+      <label for="card-number">Card Number</label>
+      <input id="card-number" type="text" placeholder="1234 5678 9012 3456" required />
+
+      <label for="exp-date">Expiry Date</label>
+      <input id="exp-date" type="text" placeholder="MM/YY" required />
+
+      <label for="cvv">CVV</label>
+      <input id="cvv" type="text" placeholder="123" required />
+
+      <button type="submit">Submit Payment</button>
+    </form>
+    <script src="YOUR-SCRIPT-HERE.js"></script>
+    
   </div>
   <div class="info-card">
     <strong>Your Info</strong>

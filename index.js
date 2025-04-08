@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const openBtn = document.getElementById('openModalBtn');
   const closeBtn = document.getElementById('closeBtn');
   const modal = document.getElementById('modal');
+  const form = document.getElementById('payment-form');
 
   openBtn.addEventListener('click', () => {
     modal.style.display = 'flex';
@@ -9,6 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   closeBtn.addEventListener('click', () => {
     modal.style.display = 'none';
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    alert('Mock payment submitted!');
+    modal.style.display = 'none';
+    form.reset();
   });
 
   document.getElementById('user-agent').textContent = navigator.userAgent;
