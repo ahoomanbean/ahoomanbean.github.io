@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
   <title>Payment Page</title>
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self' https://ipapi.co https://unpkg.com https://tile.openstreetmap.org;
-    script-src 'self' https://ipapi.co https://unpkg.com https://px-cloud.net/ https://px-cdn.net/;
+  <!-- <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://ipapi.co https://unpkg.com;
     style-src 'self' 'unsafe-inline' https://unpkg.com;
-    frame-src 'self';
     connect-src https://ipapi.co;
-img-src 'self' data: https://*.tile.openstreetmap.org https://unpkg.com;
+    frame-src 'self';
+    img-src 'self' data: https://*.tile.openstreetmap.org https://unpkg.com;
     font-src 'self';
   ">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/> -->
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -111,21 +111,21 @@ img-src 'self' data: https://*.tile.openstreetmap.org https://unpkg.com;
     <form id="payment-form" class="modal-form">
       <h2>Enter Payment Info</h2>
       <label for="card-number">Card Number</label>
-      <input id="card-number" type="text" placeholder="1234 5678 9012 3456" required />
+      <input id="card-number" type="text" placeholder="1234 5678 9012 3456" required /> -->
       <label for="exp-date">Expiry Date</label>
-      <input id="exp-date" type="text" placeholder="MM/YY" required />
+      <input id="exp-date" type="text" placeholder="MM/YY" required /> -->
       <label for="cvv">CVV</label>
-      <input id="cvv" type="text" placeholder="123" required />
+      <input id="cvv" type="text" placeholder="123" required /> -->
       <button type="submit">Submit Payment</button>
     </form>
-<script src="//client.px-cloud.net/PXBBEcJmxo/main.min.js" async></script>
+    <script src="YOUR-SCRIPT-HERE.js"></script>
   </div>
 
   <div class="info-card">
     <strong>Your Info</strong>
-    IP: <span id="ip">Loading...</span><br/>
-    Location: <span id="location">Loading...</span><br/>
-    ISP: <span id="org">Loading...</span><br/>
+    IP: <span id="ip">Loading...</span><br/> -->
+    Location: <span id="location">Loading...</span><br/> -->
+    ISP: <span id="org">Loading...</span><br/> -->
     User Agent: <span id="user-agent"></span>
     <div id="map"></div>
   </div>
