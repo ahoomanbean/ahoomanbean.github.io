@@ -1,15 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('ua').textContent = navigator.userAgent;
+  const ua = document.getElementById('ua');
+  if (ua) ua.textContent = navigator.userAgent;
 
-  fetch('https://ipapi.co/json/')
+  fetch('https://ipwho.is/')
     .then(res => res.json())
     .then(data => {
       const lat = parseFloat(data.latitude);
       const lon = parseFloat(data.longitude);
 
       document.getElementById('ip').textContent = data.ip;
-      document.getElementById('location').textContent = `${data.city}, ${data.region}, ${data.country_name}`;
-      document.getElementById('org').textContent = data.org || 'Unavailable';
+      document.getElementById('location').textContent = `${data.city}, ${data.region}, ${data.country}`;
+      document.getElementById('org').textContent = data.connection?.isp || 'Unavailable';
 
       const map = L.map('map').setView([lat, lon], 13);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
