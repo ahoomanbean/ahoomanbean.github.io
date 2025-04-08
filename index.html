@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Payment Page</title>
   <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self' https://ipapi.co https://unpkg.com https://{s}.tile.openstreetmap.org;
+    default-src 'self' https://ipapi.co https://unpkg.com https://tile.openstreetmap.org;
     script-src 'self' https://ipapi.co https://unpkg.com;
     style-src 'self' 'unsafe-inline' https://unpkg.com;
     frame-src 'self';
     connect-src https://ipapi.co;
-    img-src 'self' data: https://{s}.tile.openstreetmap.org;
+    img-src 'self' data: https://tile.openstreetmap.org;
     font-src 'self';
   ">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
@@ -84,9 +84,9 @@
 <body>
   <h1>Welcome</h1>
   <p>Click below to make a payment</p>
-  <button onclick="openModal()">Pay Now</button>
+  <button id="openModalBtn">Pay Now</button>
   <div id="modal">
-    <div id="closeBtn" onclick="closeModal()">✖</div>
+    <div id="closeBtn">✖</div>
     <iframe src="payment-form.html"></iframe>
   </div>
   <div class="info-card">
